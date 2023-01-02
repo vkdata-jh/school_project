@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednávkový list</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <form action="" class="list" id="objednavka">
+        <select name="znacka" id="znacka" title="znacka">
+            <option class="Mercedes-Benz" value="1500000" selected>Mercedes-Benz - cena 1 500 000 Kč</option>
+            <option class="Volvo" value="1200000">Volvo - cena 1 200 000 Kč</option>
+            <option value="1350000" class="Audi">Audi - cena 1 350 000 Kč</option>
+            <option value="1400000" class="BMW">BMW - cena 1 400 000 Kč</option>
+        </select><br />
+        <hr>
+
+        <label for="zaklad">základní barva - příplatek 0 Kč</label><input type="radio" class="color" name="color"
+            value="0" title="zaklad"><br />
+        <label for="paleny">Paleny lak - příplatek 5%</label><input type="radio" class="color" name="color" value="5"
+            title="paleny"><br />
+        <label for="metalicky">Metalický lak - příplatek 7%</label><input type="radio" class="color" name="color"
+            value="7" title="metalicky"><br />
+        <hr>
+
+        <label for="kamery">Parkovací kamery - cena 10 000 Kč</label><input type="checkbox" class="vybava" name="kamery"
+            value="10000" title="kamery"><br />
+        <label for="kola">Litá kola - cena 20 000 Kč</label><input type="checkbox" class="vybava" name="kola"
+            value="20000" title="kola"><br />
+        <label for="sedacky">Kožené sedačky - cena 50 000 Kč</label><input type="checkbox" class="vybava" name="sedacky"
+            value="50000" title="sedacky"><br />
+        <label for="tunning">Tuningová úprava - příplatek 20%</label><input type="checkbox" class="vybava"
+            name="tunning" value="20" title="tunning" id="tunning"><br />
+        <hr>
+    </form>
+
+    <div class="souhrn">
+        <input type="button" value="submit" id="refresh">
+        <hr>
+        <div class="suma" id="suma"></div>
+        <hr>
+        <label for="max">Maximální částka</label><input type="number" name="max" placeholder="zadejte max. částku"
+            id="max">
+        <div class="message" id="message" style="color: red;font-weight: bold;font-size: 1.5rem;"></div>
+    </div><br>
+    <hr>
+    <div class="contact" id="contact">
+        <form action="">
+            <label for="name">Zadejte vaše jméno</label><input type="text" class="name" title="name"
+                placeholder="Zadejte vaše jméno"><br>
+            <label for="email">Zadejte email</label><input type="email" name="email" title="email" id="email"
+                placeholder="zadejte váš email" value=""><br>
+            <input type="submit" value="Odešli!" title="button" id="send">
+            <hr>
+        </form>
+    </div>
+
+</body>
+
+</html>
